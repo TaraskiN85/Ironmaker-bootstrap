@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="img/logo.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-</head>
+    </head>
 <body id="entire">
     <div class="container-fluid"> 
     <header>
@@ -42,6 +42,10 @@
 		<section id="home" class="banner">
 			<h2>Our&nbsp;products limit only customers wishes</h2>
 			<p><b>Artistic forging and metal products!</b></p>
+			<div class="timer-align">
+				<div id="countdown"></div>
+				<p class="silver">Order our product THIS YEAR, and get a 25% discount from Santa!!!</p>
+	    	</div>
         </section>
         <section id="services">
         	<h2>Services We Provide</h2>
@@ -127,53 +131,17 @@
 	        	</nav>
 	        </div>
 		</section>
-		<section id="showcase">
+		<section id="showcase" class="carousel3">
 			<h2>Showcase</h2>
 			<p><b>Large portfolio of our products in Rivne and in the west of Ukraine</b></p>
-			<div id="showcase-carousel" class="carousel slide" data-bs-ride="carousel">
-			    <ol class="carousel-indicators">
-				    <li data-bs-target="#showcase-carousel" data-bs-slide-to="0" class="active"></li>
-				    <li data-bs-target="#showcase-carousel" data-bs-slide-to="1"></li>
-				    <li data-bs-target="#showcase-carousel" data-bs-slide-to="2"></li>
-				    <!--<li data-bs-target="#showcase-carousel" data-bs-slide-to="3"></li>-->
-				</ol>
-			    <div class="carousel-inner">
-			    	<div class="carousel-item active">
-			      	<img src="img/massive-gates-with-forged-lattice.jpg" class="d-block w-100" alt="massive gates with forged lattice">
-			      	<div class="carousel-caption d-none d-md-block">
-				        <h5>Be sure, our gates will protect your house</h5>
-				        <p>ST Dniprovska, Veresneve, Rivne</p>
-			      	</div>
-			    </div>    
-			    <!--<div class="carousel-item">
-			      	<img src="img/massive-gates-with-forged-lattice.jpg" class="d-block w-100" alt="massive gates with forged lattice">
-			      	<div class="carousel-caption d-none d-md-block">
-				        <h5>Massive strong gates will protect your house from uninvited guests</h5>
-				        <p>ST Dniprovska, Veresneve, Rivne</p>
-			      	</div>
-			    </div>-->
-			    <div class="carousel-item">
-			      	<img src="img/large-forged-gates.jpg" class="d-block w-100" alt="modern metallic gates">
-			    	<div class="carousel-caption d-none d-md-block">
-					    <h5>Stylish gates with modern patterns</h5>
-					    <p>ST Veresnevska, Rivne</p>
-			    	</div>
-			    </div>
-			  	<div class="carousel-item">
-			      	<img src="img/metal-trusses.jpeg" class="d-block w-100" alt="industrial object">
-			    	<div class="carousel-caption d-none d-md-block">
-					    <h5>Large constructions of any complexity</h5>
-					    <p>ST Slovatskogo, N.Dvir, Rivne</p>
-			    	</div>
-			  	</div>
-			  	<a class="carousel-control-prev" href="#showcase-carousel" role="button" data-bs-slide="prev">
-				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				    <span class="visually-hidden">Previous</span>
-			  	</a>
-				<a class="carousel-control-next" href="#showcase-carousel" role="button" data-bs-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span class="visually-hidden">Next</span>
-				</a>
+			<div class="carousel-image-block">
+		        <img class="img1" alt="Image">
+		        <img class="img2" alt="Image">
+		        <img class="img3" alt="Image">
+		    </div>
+		    <div class="d-grid gap-2 d-md-block">
+			    <button type="button" class="prev btn btn-secondary btn-sm">Previous</button>
+                <button type="button" class="next btn btn-secondary btn-sm">   Next   </button>
 			</div>
 		</section>
 		<section id="form">
@@ -233,6 +201,19 @@
 	</footer>-->
 </main>
 </div>
+	<script type="text/javascript" src="js/snowflake.min.js"></script></head>
+	<script>const snowflake = new SnowflakeJs(25,250,5000,5,25);snowflake.init();</script>
+    <script src="js/sv-countdown.js"></script>
+    <script class="countdown">
+	var countdown = new SV.Countdown('#countdown', {
+		year: 2021,
+		month: 01,
+		day: 01,
+		//untilMessage: 'Order our product THIS YEAR, and get a 25% discount from Santa!!!',
+		endMessage: 'Happy New Year and Merry Christmas!'
+	});
+	</script>
+    <script src="js/carousel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>

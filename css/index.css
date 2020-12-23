@@ -4,11 +4,15 @@
     font-family: Lato, Sans Serif;
     color: #e8c22c;
 }
+/*html,body {
+    display: block;
+}*/
 body {
     font-size: 62.5%; 
     max-width: 1200px;
     margin: auto;
     background-color: #5a5c5a;
+    display: block;
 }
 
 h1,h2,h3 {
@@ -36,6 +40,10 @@ p {
 a {
 	text-align: center;
 }
+.silver {
+    color: silver;
+    font-size: 1.2em;
+}
 header .top-block-header {
     min-height: 40px;
     display: grid;
@@ -45,11 +53,11 @@ header .top-block-header {
     background: linear-gradient(to bottom, #363231, #5a5c5a, #363231);
     padding-right: 8px;
     padding-left: 4px;
- }
- header div p {
+}
+header div p {
     font-size: 1.2em;
- }
- .logo {
+}
+.logo {
 	max-width: 90%;
 	height: auto;
 }
@@ -226,10 +234,29 @@ header .top-block-header {
     height: auto;
 }
 #showcase {
-    margin-top: 40px;
-}
-#showcase-carousel {
+    min-height: 310px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+/*.carousel3 div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+}*/
+.carousel3 div img{
+    width: 100%;
+    margin: auto;
+}
+.carousel-image-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+}
+.carousel3 div button {
+    display: inline-flex;
+    align-self: center;
 }
 #form {
     background: linear-gradient(to bottom, #363231, #5a5c5a, #363231);
@@ -237,6 +264,19 @@ header .top-block-header {
 }
 .btn-primary {
     margin: auto;
+}
+.countdown {
+    width: 25%;
+    margin-bottom: 8px;
+    margin-left: 20px; 
+    color: silver;
+    font-size: 1em;
+}
+.timer-align {
+    display: flex;
+    flex-direction: column;
+    color: silver;
+    font-size: 1em;
 }
 /*
 .block-footer {
@@ -281,6 +321,18 @@ header .top-block-header {
     h2 {
     	font-size: 3em;
     }
+    .silver {
+    font-size: 2em;
+    }
+    .timer-align {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 10px;
+    font-size: 1em;
+}
+    .countdown {
+    font-size: 1em;
+    }
     .choose-product,.our-story {
     	display: grid;
     	grid-template-columns: repeat(2, 1fr);
@@ -292,7 +344,10 @@ header .top-block-header {
     }
 }
 @media (min-width: 900px) {
-	.choose-product {
+	#showcase {
+    min-height: 500px;
+    }
+    .choose-product {
     	grid-template-columns: repeat(3, 1fr);
     }
     #working-process div {
@@ -318,4 +373,5 @@ header .top-block-header {
     	grid-column-gap: 30px;
     }
 }
+
 
