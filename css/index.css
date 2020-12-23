@@ -328,12 +328,10 @@ header div p {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-column-gap: 10px;
+        font-size: 1em;
     }
     .timer-align div {
         font-size: 2em;
-    }
-    .countdown {
-        font-size: 1em;
     }
     .choose-product,.our-story {
     	display: grid;
