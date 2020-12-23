@@ -322,16 +322,18 @@ header div p {
     	font-size: 3em;
     }
     .silver {
-    font-size: 2em;
+        font-size: 2em;
     }
     .timer-align {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 10px;
-    font-size: 1em;
-}
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 10px;
+    }
+    .timer-align div {
+        font-size: 2em;
+    }
     .countdown {
-    font-size: 1em;
+        font-size: 1em;
     }
     .choose-product,.our-story {
     	display: grid;
@@ -339,13 +341,13 @@ header div p {
     	grid-column-gap: 10px;
     }
     .our-story img {
-    width: auto;
-    max-height: 350px;
+        width: auto;
+        max-height: 350px;
     }
 }
 @media (min-width: 900px) {
 	#showcase {
-    min-height: 500px;
+        min-height: 500px;
     }
     .choose-product {
     	grid-template-columns: repeat(3, 1fr);
