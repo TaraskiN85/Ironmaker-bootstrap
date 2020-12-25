@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap');
 
-:root{
+:root {
     font-family: Lato, Sans Serif;
     color: #e8c22c;
 }
-/*html,body {
-    display: block;
-}*/
 body {
     font-size: 62.5%; 
     max-width: 1200px;
+    min-width: 300px;
     margin: auto;
     background-color: #5a5c5a;
     display: block;
 }
-
 h1,h2,h3 {
     color: #a87507;
 }
@@ -22,7 +19,8 @@ h1 {
 	text-transform: uppercase;
 	font-size: 2.4em;
 	text-align: center;
-}h2 {
+}
+h2 {
 	font-size: 2.5em;
 	text-align: center;
 }
@@ -58,41 +56,45 @@ header div p {
     font-size: 1.2em;
 }
 .logo {
+	max-height: 80%;
 	max-width: 90%;
-	height: auto;
 }
 .main-block-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: auto;
+    padding: 10px;
 }
-.social-networks a{
-	height: 30px;
-	display: inline-flex;
-	align-items: center;
+.social-networks {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    align-items: center;
+}
+.social-networks {
+    width: 142px;
+}
+.navbar-light .navbar-toggler {
+    color: orangered;
+}
+.bg-light {
+    background-color: #5a5c5a!important;
 }
 .social-networks a img {
 	height: 40px;
-	width: 30px;
-	padding: 8px;
-	margin: 2px;
-    display: flex;
+	width: 40px;
 }
 .social-networks a img:hover {
-	height: 48px;
-	width: 38px;
-	padding: 4px;
-	margin: 2px;
-
+	height: 44px;
+	width: 44px;
 }
 .navigation-block {
 	height: 80px;
 	text-transform: uppercase;
-    max-width: 250px;
     align-items: center;
     padding: 4px;
     margin: 4px;
+    color: orangered;
 }
 .navigation-block a {
 	text-decoration: none;
@@ -103,6 +105,7 @@ header div p {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    width: 130px;
 }
 .navigation-block a:hover {
 	color: #cf4e08;
@@ -115,7 +118,6 @@ header div p {
     max-width: 100%;
     background-size: cover;
     min-height: 450px;
-    background-position: left right 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -129,6 +131,7 @@ header div p {
 }
 .banner p {
 	text-align: left;
+    margin-left: 0px;
 }
 #services {
     display: flex;
@@ -142,6 +145,7 @@ header div p {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    margin: 10px;
 }
 .product-service img {
     max-width: 90%;
@@ -151,10 +155,11 @@ header div p {
 }
 .product-service {
 	height: 500px;
-	width: 290px;
+	width: 280px;
 	border: 2px solid orange;
 	border-radius: 8px;
-    /*box-shadow: 0 10px 20px #5a5c5a, 0 6px 6px #5a5c5a;*/
+    margin: 5px;
+    box-shadow: 0 10px 20px #412C09, 0 6px 6px rgba(0,0,0,0.43);
 }
 .product-service p b {
 	color: #a34708;
@@ -173,13 +178,15 @@ header div p {
     align-items: center;
     margin: auto;
     margin-bottom: 20px;
+    background-color: #5a5c5a;
 }
 .working-steps {
 	height: 290px;
 	width: 290px;
 	border: 2px solid orange;
 	border-radius: 8px;
-    box-shadow: 0 10px 20px #363231, 0 6px 6px #363231;
+    margin: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.43), 0 6px 6px #363231;
 }
 .working-steps p b {
 	color: silver;
@@ -193,20 +200,22 @@ header div p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 40px;
+    z-index: -1;
 }
 .banner-estimate::after {
-  content: "";
-  background: url(https://img3.goodfon.com/wallpaper/nbig/f/98/kuznica-molot-nakovalnya.jpg);
-  filter: sepia(1) grayscale (1);
-  opacity: 0.35;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-size: cover;
-  position: absolute;
-  z-index: -1;   
+    content: "";
+    background: url(https://img3.goodfon.com/wallpaper/nbig/f/98/kuznica-molot-nakovalnya.jpg);
+    filter: sepia(1) grayscale (1);
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;   
 }
 #about-us {
 	display: flex;
@@ -228,49 +237,46 @@ header div p {
 #about-us p {
 	text-align: justify;
 }
-
-#form div img {
+#form-section div img {
     width: 100%;
     height: auto;
 }
+.form {
+    width: 80%;
+    margin: auto;
+}
 #showcase {
-    min-height: 310px;
+    min-height: 325px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: #5a5c5a;
 }
-/*.carousel3 div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-}*/
 .carousel3 div img{
     width: 100%;
     margin: auto;
+    border-radius: 10px;
 }
 .carousel-image-block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
 }
-.carousel3 div button {
-    display: inline-flex;
-    align-self: center;
+#carousel-controls {
+    min-width: 120;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
-#form {
+#form-section {
     background: linear-gradient(to bottom, #363231, #5a5c5a, #363231);
-    margin-bottom: 10px;
+    padding: 10px;
 }
 .btn-primary {
     margin: auto;
 }
 .countdown {
-    width: 25%;
-    margin-bottom: 8px;
-    margin-left: 20px; 
     color: silver;
-    font-size: 1em;
 }
 .timer-align {
     display: flex;
@@ -278,37 +284,44 @@ header div p {
     color: silver;
     font-size: 1em;
 }
-/*
-.block-footer {
-    height: 50px;
+.block-footer .social-networks {
+    width: 142px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    align-items: center; 
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    align-items: center;
 }
-.navigation-block-footer a {
-    text-decoration: none;
-    color: silver;
-    border: 2px solid transparent;
-    padding: 2px;
-    margin: 4px;
-    font-size: 2em;
+.footer-logo h2{
+    text-transform: uppercase;
 }
-.navigation-block-footer a:hover {
-    color: #cf4e08;
-    text-transform: bold;
-    width: 40px;
-    border: 2px solid; 
-    border-color: #cf4e08;
-    border-radius: 4px;
+.footer-logo h3{
+    font-size: 1.5em;
 }
-*/
+.block-footer {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.top-block-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.top-block-footer div p {
+    font-size: 1.2em;
+}
+.copyright p{
+    margin-top: 15px;
+    font-size: 0.8em;
+}
 @media (min-width: 640px) {
     .navigation-block nav{
         display: flex;
 	    font-size: 1.5em;
-	    margin-top: 25px;
-    }
+	}
     .navigation-block {
         max-width: 400px;
     }
@@ -325,6 +338,7 @@ header div p {
         font-size: 2em;
     }
     .timer-align {
+        margin-top: 50px;
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-column-gap: 10px;
@@ -338,17 +352,43 @@ header div p {
     	grid-template-columns: repeat(2, 1fr);
     	grid-column-gap: 10px;
     }
+    #working-process div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
     .our-story img {
         width: auto;
         max-height: 350px;
     }
+    #showcase {
+        min-height: 400px;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+    }
+    #textarea {
+        height: 110px;
+    }
+    .top-block-footer { 
+        display: grid;
+        grid-template-columns: 35% 1fr 1fr 1fr;
+        grid-column-gap: 5px;
+        align-items: center; 
+    }
 }
 @media (min-width: 900px) {
 	#showcase {
-        min-height: 500px;
+    min-height: 500px;
     }
     .choose-product {
-    	grid-template-columns: repeat(3, 1fr);
+    	display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
     }
     #working-process div {
     	display: grid;
@@ -358,7 +398,8 @@ header div p {
 }
 @media (min-width: 1200px) {
 	.choose-product {
-    	grid-template-columns: repeat(4, 1fr);
+    	display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
         h1 {
 	    font-size: 4em;
