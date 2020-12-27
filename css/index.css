@@ -72,6 +72,7 @@ header div p {
 .main-block-header {
     display: flex;
     justify-content: space-between;
+    margin: 8px;
 }
 .social-networks {
 	display: grid;
@@ -275,6 +276,7 @@ header div p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
+    margin: 5px;
 }
 #carousel-controls {
     min-width: 120px;
