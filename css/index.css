@@ -39,8 +39,18 @@ a {
 	text-align: center;
 }
 .silver {
-    color: silver;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    animation-name: coloring;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes coloring {
+    0% {
+       color: grey;
+    }
+    100% {
+       color: silver;
+    }
 }
 header .top-block-header {
     min-height: 40px;
@@ -60,10 +70,8 @@ header div p {
 	max-width: 90%;
 }
 .main-block-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .social-networks {
 	display: grid;
@@ -76,6 +84,10 @@ header div p {
 }
 .navbar-light .navbar-toggler {
     color: orangered;
+}
+.navbar-toggler {
+    display: flex;
+    justify-content: flex-end;
 }
 .bg-light {
     background-color: #5a5c5a!important;
@@ -121,6 +133,7 @@ header div p {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    filter: grayscale(0.1);
 }
 .banner img {
 	max-width: 100%;
@@ -264,7 +277,7 @@ header div p {
     grid-column-gap: 10px;
 }
 #carousel-controls {
-    min-width: 120;
+    min-width: 120px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -279,17 +292,11 @@ header div p {
     color: silver;
 }
 .timer-align {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    color: silver;
+    color: orangered;
     font-size: 1em;
-}
-.block-footer .social-networks {
-    width: 142px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 5px;
-    align-items: center;
 }
 .footer-logo h2{
     text-transform: uppercase;
@@ -316,6 +323,9 @@ header div p {
 .copyright p{
     margin-top: 15px;
     font-size: 0.8em;
+}
+.social-networks {
+    min-height: 45px;
 }
 @media (min-width: 640px) {
     .navigation-block nav{
@@ -394,6 +404,12 @@ header div p {
     	display: grid;
     	grid-template-columns: repeat(3, 1fr);
     	grid-column-gap: 10px;
+    }
+    .top-block-footer { 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 25px;
+        align-items: center; 
     }
 }
 @media (min-width: 1200px) {

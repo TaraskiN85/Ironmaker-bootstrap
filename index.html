@@ -16,7 +16,25 @@
             <p>7, Veresnevska ST, Rivne<br>(098) 750-6116</p>
         </div>
         <div class="main-block-header">
-           <div class="social-networks">
+            <div class="navigation-block">
+            	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				    <div class="container-fluid">
+					    <!--<a class="navbar-brand" href="#"></a>-->
+					    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					        <span class="navbar-toggler-icon"></span>
+					    </button>
+					    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					        <div class="navbar-nav" id="navigation">
+					            <a class="nav-link active" aria-current="page" href="#about-us">About us</a>
+					            <a class="nav-link" href="#services">Our Services</a>
+					            <a class="nav-link" href="#showcase">Showcase</a>
+					            <a class="nav-link" href="#contacts">Contact us</a>
+					        </div>
+					    </div>
+				    </div>
+				</nav>
+            </div>
+            <div class="social-networks">
                 <a href="https://www.facebook.com/" target="blank">
                     <img src="img/fb.svg" alt="Facebook icon">
                 </a>
@@ -26,24 +44,6 @@
                 <a href="https://www.youtube.com/" target="blank">
                     <img src="img/yt.svg" alt="Youtube icon">
                 </a>
-            </div>
-            <div class="navigation-block">
-            	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				    <div class="container-fluid">
-					    <a class="navbar-brand" href="#"></a>
-					    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-					        <span class="navbar-toggler-icon"></span>
-					    </button>
-					    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					        <div class="navbar-nav">
-					            <a class="nav-link active" aria-current="page" href="#about-us">About us</a>
-					            <a class="nav-link" href="#services">Our Services</a>
-					            <a class="nav-link" href="#showcase">Showcase</a>
-					            <a class="nav-link" href="#contacts">Contact us</a>
-					        </div>
-					    </div>
-				    </div>
-				</nav>
             </div>
         </div>
     </header>
@@ -88,7 +88,7 @@
         	</div>
         	<div class="navigation-block">
         		<nav class="navigation-block-services">
-        			<a href="#form">Get Free Consultation</a>
+        			<a href="#form-section">Get Free Consultation</a>
         		</nav>
         	</div>        	
         </section>
@@ -139,9 +139,9 @@
 			<h2>Showcase</h2>
 			<p><b>Large portfolio of our products in Rivne and in the west of Ukraine</b></p>
 			<div class="carousel-image-block">
-		        <img class="img1" alt="Image">
-		        <img class="img2" alt="Image">
-		        <img class="img3" alt="Image">
+		        <img class="img1" alt="Forged iron products of our company">
+		        <img class="img2" alt="Gates, balconies and other products">
+		        <img class="img3" alt="Images of modern and classic stylish metal gates">
 		    </div>
 		    <div class="d-grid gap-2 d-md-block" id="carousel-controls">
 			    <button type="button" class="prev btn btn-secondary btn-sm">Previous</button>
@@ -151,7 +151,7 @@
 		<section id="form-section">
 			<h2>Request Free Estimate</h2>
 			<p><b>Call us or fill in the form below and describe your needs</b></p>
-			<form method="POST" action="https://formspree.io/f/xeqprjbz" class="form">
+			<form method="POST" action="https://formspree.io/f/xeqprjbz">
 				<div class="row">
 					<div class="mb-3">
 						<input type="text" name="name" class="form-control" placeholder="Your Name*" required>
@@ -164,7 +164,7 @@
 					<textarea class="form-control" id="feedback-form" rows="3" placeholder="Your question, order description (max 1500 symbols)" maxlength="1500"></textarea>
 				</div>
 				<div class="d-grid gap-2 col-6 mx-auto">
-					<input type="button" class="btn btn-primary" value="Submit form">
+					<button class="btn btn-primary" type="submit">Submit form</button>
 				</div>
 			</form>
 		</section>
@@ -192,7 +192,7 @@
 			</div>
 			<div class="come">
 				<h3>Visit Us</h3>
-				<p>7, Veresnevska ST, Rivne</p>
+				<p>7, Veresnevska ST,</p><p>Rivne</p>
 			</div>
 		</div>
 		<div>
