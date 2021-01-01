@@ -19,7 +19,6 @@
             <div class="navigation-block">
             	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				    <div class="container-fluid">
-					    <!--<a class="navbar-brand" href="#"></a>-->
 					    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					        <span class="navbar-toggler-icon"></span>
 					    </button>
@@ -53,7 +52,7 @@
 			<p><b>Artistic forging and metal products!</b></p>
 			<div class="timer-align">
 				<div id="countdown"></div>
-				<p class="silver">Order our product THIS YEAR, and get a 25% discount from Santa!!!</p>
+				<p class="silver">Order our product till CHRISTMAS, and get a 25% discount from Santa!!!</p>
 	    	</div>
         </section>
         <section id="services">
@@ -152,19 +151,21 @@
 			<h2>Request Free Estimate</h2>
 			<p><b>Call us or fill in the form below and describe your needs</b></p>
 			<form method="POST" action="https://formspree.io/f/xeqprjbz">
-				<div class="row">
-					<div class="mb-3">
-						<input type="text" name="name" class="form-control" placeholder="Your Name*" required>
+				<div class="form-width">
+					<div class="row">
+						<div class="mb-3">
+							<input type="text" name="name" class="form-control" placeholder="Your Name*" required>
+						</div>
+						<div class="mb-3">
+							<input type="email" class="form-control" name="email" placeholder="mail@example.com *" required>
+						</div>
 					</div>
 					<div class="mb-3">
-						<input type="email" class="form-control" name="email" placeholder="mail@example.com *" required>
+						<textarea class="form-control" id="feedback-form" rows="3" placeholder="Your question, order description (max 1500 symbols)" maxlength="1500"></textarea>
 					</div>
-				</div>
-				<div class="mb-3">
-					<textarea class="form-control" id="feedback-form" rows="3" placeholder="Your question, order description (max 1500 symbols)" maxlength="1500"></textarea>
-				</div>
-				<div class="d-grid gap-2 col-6 mx-auto">
-					<button class="btn btn-primary" type="submit">Submit form</button>
+					<div class="d-grid gap-2 col-6 mx-auto">
+						<button class="btn btn-primary" type="submit">Submit form</button>
+					</div>
 				</div>
 			</form>
 		</section>
@@ -205,14 +206,13 @@
 			<p>The use of site materials is completely free and is not a subject to any restrictions</p>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/snowflake.min.js"></script>
-	<script>const snowflake = new SnowflakeJs(25,250,5000,5,25);snowflake.init();</script>
+	<script src="js/snow.js"></script>
     <script src="js/sv-countdown.js"></script>
     <script class="countdown">
 	var countdown = new SV.Countdown('#countdown', {
 		year: 2021,
 		month: 01,
-		day: 01,
+		day: 07,
 		//untilMessage: 'Order our product THIS YEAR, and get a 25% discount from Santa!!!',
 		endMessage: 'Happy New Year and Merry Christmas!'
 	});

@@ -4,6 +4,9 @@
     font-family: Lato, Sans Serif;
     color: #e8c22c;
 }
+html,body {
+    margin:0;height:100%;
+}
 body {
     font-size: 62.5%; 
     max-width: 1200px;
@@ -46,7 +49,10 @@ a {
 }
 @keyframes coloring {
     0% {
-       color: grey;
+       color: silver;
+    }
+    50% {
+        color: orangered;
     }
     100% {
        color: silver;
@@ -68,6 +74,7 @@ header div p {
 .logo {
 	max-height: 80%;
 	max-width: 90%;
+    margin-left: 10px;
 }
 .main-block-header {
     display: flex;
@@ -250,10 +257,6 @@ header div p {
 #about-us p {
 	text-align: justify;
 }
-#form-section div img {
-    width: 100%;
-    height: auto;
-}
 .form {
     width: 80%;
     margin: auto;
@@ -285,6 +288,10 @@ header div p {
 #form-section {
     background: linear-gradient(to bottom, #363231, #5a5c5a, #363231);
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 .btn-primary {
     margin: auto;
